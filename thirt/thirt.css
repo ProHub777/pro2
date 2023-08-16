@@ -1,0 +1,38 @@
+@import './font.css';
+
+:root {
+    --R300: 'RobotoCondensed-Light';
+    --R400: 'RobotoCondensed-Regular';
+    --R700: 'RobotoCondensed-Bold';
+    --red: #600E09;
+    --aqua: #85CCDC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.list_link {
+   margin-left: 1000px;
+}
+
+
+.main {
+    margin-left: 300px;
+    margin-top: 200px;
+}
+
+.header {
+    background-color: gray;
+    height: 100vh;
+}

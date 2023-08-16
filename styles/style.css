@@ -1,0 +1,273 @@
+@import './font.css';
+
+:root {
+    --R300: 'RobotoCondensed-Light';
+    --R400: 'RobotoCondensed-Regular';
+    --R700: 'RobotoCondensed-Bold';
+    --red: #600E09;
+    --aqua: #85CCDC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: url('../img/header_bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.nav__bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.list__link {
+    font-family: var(--R400);
+    font-size: 36px;
+    line-height: 42px;
+    color: white;
+    position: relative;
+    transition: 0.5s;
+}
+
+.list__link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 4px;
+    background-color: var(--aqua);
+    left: 50%;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.list__link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.list__link:hover {
+    color: var(--aqua);
+}
+
+.logo {
+    margin: 140px;
+}
+
+
+/*before & after */
+.header::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(180deg, #111213 0%, #111213 43.62%, rgba(32, 31, 33, 0) 86.33%);
+    top: 0;
+    left: 0;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0deg, #0E0E0E 0%, rgba(17, 17, 17, 0.850295) 16.53%, rgba(32, 31, 33, 0) 100%);
+}
+
+
+.main {
+    background-color: #0E0E0E;
+}
+
+.about {
+    padding: 100px 0;
+}
+
+.about__title {
+    font-family: var(--R400);
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    color: white;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.about__info {
+    display: grid;
+    grid-template-columns: 35% 60%;
+    gap: 25px;
+}
+
+.about__text {
+    font-family: var(--R400);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #E5E5E5;
+    display: flex;
+    flex-direction: column
+    
+}
+
+.about__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about__right .about__text {
+    gap: 20px;
+}
+
+.main2 {
+    width: 100%;
+}
+
+.main3 {
+    font-family: 'Courier New', Courier, monospace;
+    color: aqua;
+    font-size: 40px;
+    margin-top: -700px;
+    margin-left: 1200px;
+}
+
+.main4 {
+    margin-left: 200px;
+    padding: 20px;
+}
+
+.main5 {
+    color: white;
+    font-size: 20px;
+    margin-left: 130px;
+    margin-top: -70px;
+}
+
+.x {
+    margin-top: 500px;
+}
+
+
+.list_link:hover {
+    color: green;
+    border-color: black;
+}
+
+.latest__news {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.late__img {
+    border-radius: 10px;
+}
+
+.latest__info:hover .late__img {
+    border-radius: 0;
+}
+
+.latest__info {
+    margin-top: 10px;
+    border-radius: 8px;
+    position: relative;
+    transition: 0.5s;
+    overflow: hidden;
+    border: 5px solid;
+}
+
+.latest__info:hover {
+    border-color: gold;
+}
+
+.latest__info::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: 0.5s;
+}
+
+.latest__info:hover::after {
+    transform: translateY(0);
+}
+
+.latest__info:hover .icon {
+    transform: scale(1);
+    z-index: 2;
+}
+
+.latest__title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    padding-left: 10px;
+    transform: 0.5s;
+}
+
+.icon {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    width: 36px;
+    height: 36px;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: 0.5s;
+    transform: scale(0);
+}
+
+.latest__info:hover .latest__title {
+    background-color: #6BB071;
+    transform: translateY(-35px);
+}
+
+.latest__info:hover .late__img {
+    border-radius: 0;
+}
+
+.lates__title{
+    color: white;
+}
+
+
+.latest__intro{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
